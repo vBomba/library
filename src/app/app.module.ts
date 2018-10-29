@@ -6,11 +6,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoMaterialModule } from './material-module';
 import { MatNativeDateModule } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BooksComponent } from './books/books.component';
+import { UsersComponent } from './users/users.component';
+import { RaportsComponent } from './raports/raports.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BooksComponent,
+    UsersComponent,
+    RaportsComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
