@@ -10,7 +10,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BooksComponent } from './books/books.component';
 import { UsersComponent } from './users/users.component';
 import { RaportsComponent } from './raports/raports.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { RouterModule, Routes } from '@angular/router';
+import { DataHttpService } from './services/data-http.service';
+
+
+const appRoutes: Routes = [
+  { path: '', redirectTo: 'navigations', pathMatch: 'full' },
+  { path: 'users', component: UsersComponent },
+  { path: 'books', component: BooksComponent },
+  { path: 'raports', component: RaportsComponent },
+  { path: '**', redirectTo: 'main' }
+];
 
 @NgModule({
   declarations: [
@@ -18,7 +28,6 @@ import { NavigationComponent } from './navigation/navigation.component';
     BooksComponent,
     UsersComponent,
     RaportsComponent,
-    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +37,11 @@ import { NavigationComponent } from './navigation/navigation.component';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(
+      appRoutes,
+    ),
   ],
-  providers: [],
+  providers: [DataHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

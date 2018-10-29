@@ -1,5 +1,13 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- <div class="login-panel">
+<mat-drawer-container class="main-container">
+  <mat-drawer mode="side" class="side-panel" opened>
+    <a routerLink="/books" routerLinkActive="active-link" mat-button>Books </a>
+    <a routerLink="/users" routerLinkActive="active-link" mat-button>Users </a>
+    <a routerLink="/raports" routerLinkActive="active-link" mat-button>Get raport </a>
+  </mat-drawer>
+
+  <mat-drawer-content>
+  <!-- <div class="login-panel">
   <button mat-button>
     <mat-icon> face </mat-icon>
   </button>
@@ -13,3 +21,7 @@
     <mat-icon> verified_user </mat-icon>
   </button>
 </div> -->
+      
+<router-outlet></router-outlet>
+</mat-drawer-content>
+  </mat-drawer-container>

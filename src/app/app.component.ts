@@ -1,5 +1,7 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,10 +9,8 @@ import {MatSidenav} from '@angular/material/sidenav';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('sidenav') sidenav: MatSidenav;
 
-  switch(show: boolean) {
-    this.show = show;
-  }
+  constructor(private route: ActivatedRoute, private router: Router) { }
+
 
 }

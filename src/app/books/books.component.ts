@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataHttpService } from '../services/data-http.service';
 
 @Component({
   selector: 'app-books',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  constructor() { }
+  constructor( public data: DataHttpService ) { }
 
   ngOnInit() {
+  }
+
+  firstClick() {
+    this.data.firstClick();
   }
 
 }
