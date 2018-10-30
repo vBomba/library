@@ -12,6 +12,7 @@ import { UsersComponent } from './users/users.component';
 import { RaportsComponent } from './raports/raports.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DataHttpService } from './services/data-http.service';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 const appRoutes: Routes = [
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersComponent },
   { path: 'books', component: BooksComponent },
   { path: 'raports', component: RaportsComponent },
+  { path: 'registration', component: RegistrationComponent },
   { path: '**', redirectTo: 'main' }
 ];
 
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
     BooksComponent,
     UsersComponent,
     RaportsComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,

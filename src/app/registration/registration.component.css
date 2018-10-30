@@ -1,0 +1,43 @@
+/* html, body
+{
+    height: 100%;
+} */
+
+.container{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+}
+
+form.registation-form {
+    margin: 40px;
+    padding: 20px;
+    width: 1000px;
+    background-color: #ecfad7;
+    border: solid 1px ;
+    border-radius: 10px;
+    text-align: center;
+}
+/* .registration-table {
+    width: 100%;
+} */
+
+.full-width {
+    width: 99%;
+}
+
+.half-width{
+    width: 49%;
+    padding: 2px;
+}
+
+.third-width{
+    width: 32%;
+    padding: 2px;
+}
+
+progress{
+    color: blue;
+    background-color: yellow;
+}

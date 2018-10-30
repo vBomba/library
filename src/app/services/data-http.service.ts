@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { stringify } from '@angular/core/src/render3/util';
 
 @Injectable()
 export class DataHttpService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  firstClick() {
-    return console.log('clicked!');
+  getUsers() {
+    return (this.http.get('https://reqres.in/api/users?page=2'));
   }
 }

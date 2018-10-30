@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataHttpService } from '../services/data-http.service';
+import { ObjectUnsubscribedError } from 'rxjs';
+import { Users } from '../models/users';
 
 @Component({
   selector: 'app-books',
@@ -8,13 +10,16 @@ import { DataHttpService } from '../services/data-http.service';
 })
 export class BooksComponent implements OnInit {
 
-  constructor( public data: DataHttpService ) { }
+  users: Users;
+  elements: any;
+
+  constructor(public data: DataHttpService) { }
 
   ngOnInit() {
+    this.data.getUsers().subscribe(items => {
+      this.elements = items;
+    });
   }
 
-  firstClick() {
-    this.data.firstClick();
-  }
 
 }
