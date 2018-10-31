@@ -10,14 +10,14 @@ import { Users } from '../models/users';
 })
 export class BooksComponent implements OnInit {
 
-  users: Users;
   elements: any;
 
   constructor(public data: DataHttpService) { }
 
   ngOnInit() {
-    this.data.getUsers().subscribe(items => {
-      this.elements = items;
+    this.data.getBooks().subscribe(response => {
+      this.elements = response.items;
+      console.log(response.items);
     });
   }
 

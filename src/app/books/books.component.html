@@ -1,1 +1,11 @@
-12334
+<ul *ngIf="elements">
+    <li *ngFor="let books of elements">
+        <div class="book-container">
+            <img [src]="books.volumeInfo.imageLinks.smallThumbnail" class="book-img">
+            <div class="descriprion">
+                <div class="book-title">{{ books.volumeInfo.title }}</div>
+                <div class="book-describe">{{ books.volumeInfo.description }}</div>
+            </div>
+        </div>
+    </li>
+</ul>

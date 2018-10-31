@@ -1,0 +1,24 @@
+.book-container{
+    display:flex;
+}
+
+img.book-img{
+    border: solid 1px black;
+    height: 100px;
+    width: 80px;
+}
+
+ul li {
+    display: block;
+    padding: 10px;
+}
+
+
+ul li img:hover{
+    border:solid 1px red;
+}
+
+ul li div.book-title{
+    color: #006eff;
+    font-size: 1.5rem;
+}

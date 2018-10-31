@@ -18,9 +18,9 @@ export class UsersDetailsComponent implements OnInit {
 }
 drop ( event: CdkDragDrop<number[]> ) {
   if ( event.previousContainer !== event.container) {
-    transferArrayItem( event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex)
+    transferArrayItem( event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex );
   } else {
-moveItemInArray ( this.numbers, event.previousIndex, event.currentIndex );
+    moveItemInArray ( event.container.data, event.previousIndex, event.currentIndex );
 }
 }
 }

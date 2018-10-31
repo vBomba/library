@@ -10,4 +10,8 @@ export class DataHttpService {
   getUsers() {
     return (this.http.get('https://reqres.in/api/users?page=2'));
   }
+
+  getBooks() {
+    return(this.http.get('https://www.googleapis.com/books/v1/volumes?q=JavaScript'));
+  }
 }
