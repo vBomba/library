@@ -1,0 +1,11 @@
+<div style="display: flex">
+<div cdkDropList [cdkDropListData] = "numbers" (cdkDropListDropped) = "drop($event)" [cdkDropListConnectedTo] = "bookList" #numberList = "cdkDropList" class="number-container">
+  <span>Taken books</span>  
+  <div cdkDrag *ngFor=" let number of numbers" class="number-panel">{{number}}</div>
+</div>
+
+<div cdkDropList [cdkDropListData] = "books" (cdkDropListDropped) = "drop($event)" [cdkDropListConnectedTo] = "numberList" #bookList = "cdkDropList" class="number-container">
+  <span>Return</span>
+  <div cdkDrag *ngFor=" let number of books" class="number-panel">{{number}}</div>
+</div>
+</div>

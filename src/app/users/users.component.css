@@ -1,0 +1,18 @@
+ul li {
+    display: flex;
+    padding: 10px;
+}
+
+ul li img{
+    border-radius: 50%;
+    border:solid 2px;
+}
+
+ul li img:hover{
+    border:solid 2px red;
+}
+
+ul li span{
+    color: #006eff;
+    font-size: 1.5rem;
+}
